@@ -10,8 +10,8 @@ The constructor takes following keyword arguments:
 - `selection`: [Selection](@ref) function (default: [`tournament`](@ref))
 - `crossover`: [Crossover](@ref) function (default: [`genop`](@ref))
 - `mutation`: [Mutation](@ref) function (default: [`genop`](@ref))
+- `pop_dependent`: Boolean that should be set to true when a optimization function dependent on other members of the population are used. 
 - `metrics` is a collection of convergence metrics.
-- `multi-pop`: determines whether to use a Hierarchical Genetic Algorithm (https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8004959)
 """
 struct GA{T1,T2,T3} <: AbstractOptimizer
     populationSize::Int
